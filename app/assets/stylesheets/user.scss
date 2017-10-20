@@ -1,0 +1,20 @@
+// Place all the styles related to the user controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#register {
+  position: absolute;
+  top: 0px;
+width:50%;
+left:270px;
+  padding: 18px 6% 60px 6%;
+  margin: 0 0 35px 0;
+  background: #f7f7f7;
+  border: 1px solid rgba(147, 184, 189, 0.8);
+  -webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+  -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+  box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+  -webkit-box-shadow: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}

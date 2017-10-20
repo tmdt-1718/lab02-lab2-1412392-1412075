@@ -1,0 +1,43 @@
+<div class="container">
+    
+    <header>
+        <h1>Vui lòng đăng nhập</h1>
+    </header>
+    <section>
+        <div id="container_demo" >
+            <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+            <a class="hiddenanchor" id="toregister"></a>
+            <a class="hiddenanchor" id="tologin"></a>
+            <div id="wrapper">
+                <div id="login" class="animate form">
+                    
+                    <% if flash[:error].nil? %>
+                         <h3 class="text-success"><%= flash[:success]%></h3>
+                    <% else %>
+                        <h3 class="text-danger"><%= flash[:error]%></h3>
+                    <% end %>
+                    
+                    <%= form_with scope: :login,local: true do |f|%>
+                    <h1>Đăng Nhập</h1>
+                    <div class="form-group">
+                        <label for="username" class="uname"  > Email </label>
+                        <%= f.text_field :user_email,class: "form-control" , placeholder:"abc@gmail.com"%>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="youpasswd" > Password </label>
+                        <%= f.password_field :user_password,class: "form-control" %>
+                        
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <%= link_to "Register account",'/signup',class: 'nav-link'%>
+                    <% end%>
+                </div>
+                
+                
+            </div>
+            
+        </div>
+        
+    </section>
+</div>

@@ -1,0 +1,100 @@
+<h1 class="text-info">ĐĂNG KÝ TÀI KHOẢN</h1>
+
+
+<div class="container">
+	<div class="row">
+		<div id="register" class="animate form registration_form">
+
+				<% if flash[:error].nil? %>
+				<% else %>
+					<h3 class="text-danger"><%= flash[:error]%></h3>
+				<% end %>
+				
+				<%= form_with scope: :user,local: true do |f|%>
+					<div class="form-group hidden">
+						<label class="label-control">
+							ID
+						</label>
+						<%= f.text_field :user_id,class: "form-control",
+						value:  @numberuser
+						%>
+						
+					</div>
+					<div class="form-group">
+						<label class="label-control">
+							Name
+						</label>
+						<%= f.text_field :user_name,class: "form-control",required: "true", placeholder:"john smith"%>
+						
+					</div>
+					<div class="form-group">
+						<label class="label-control">
+							Email
+						</label>
+						<%= f.text_field :user_email,class: "form-control",required: "true", placeholder:"abc@gmail.com"%>
+						
+					</div>
+					<div class="form-group">
+						<label class="label-control">
+							Password
+						</label>
+						<%= f.password_field :user_password,
+						id: 'password1',
+						class: "form-control",required: "true" %>
+						
+					</div>
+					<div class="form-group">
+						<label class="label-control">
+							Confirm Password
+						</label>
+						<%= f.password_field :passwordconfirm,required: "true",class: "form-control",
+						id: 'password2'
+						%>
+						<p id="passwordcheckmeg" style="font-style: italic;"></p>
+						
+					</div>
+					<button type="submit" class="btn btn-primary">Signup</button>
+
+				 	<div class="clearfix"></div>
+
+					<div class="separator">
+						<p class="change_link">Already a member ?
+							<a href="/login" > Log in </a>
+						</p>
+						<div class="clearfix"></div>
+						<br />
+						<div>
+							<h1><i class="fa fa-paw"></i> Thanh Phi Owner</h1>
+							<p>©2017 All Rights Reserved. Design by Thanh Phi!</p>
+						</div>
+					</div>
+
+				<% end%>
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+
+		$('#password2').keyup(function(e)
+		{
+			var pass1=$('#password1').val();		
+			var pass2=$('#password2').val();
+			if(pass2 != pass1)
+			{
+				$('#password2').css('border','1px solid red');
+				$('#passwordcheckmeg').html("Password incorrect");
+				$('#passwordcheckmeg').css("color","red");
+			}
+			else{
+				$('#password2').css('border','1px solid green');
+				$('#passwordcheckmeg').html("Password ok");
+				$('#passwordcheckmeg').css("color","green");
+			}
+
+		});
+	});
+</script>
