@@ -11,6 +11,7 @@ class LoginController < ApplicationController
 			render :index
 		else
 			session[:current_user]=user
+			session[:current_user_id]=user.user_id
 			flash[:success]="Login successfully"
 			redirect_to '/'
 		end

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  m_id: 1
+  m_user: 1
+  m_content: MyString
+  m_status: false
+  m_date: 2017-10-21 16:36:35
+
+two:
+  m_id: 1
+  m_user: 1
+  m_content: MyString
+  m_status: false
+  m_date: 2017-10-21 16:36:35
