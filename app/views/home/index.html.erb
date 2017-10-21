@@ -44,15 +44,29 @@
 	</thead>
 	<tbody>
 		<% @listmessage.each do |row| %>
-		<tr>
-			<td><%= row['user_name']%></td>
-			<td><%= truncate(row['m_content'],length:40)%></td>
-			<td><%= row['created_at']%></td>
-			<td>
-				<a class="btn btn-primary" href="#">Xem</a>
-				
-			</td>
-		</tr>
+			<% if row['m_status']==true %>
+				<tr style="background-color: #ffb5b5;">
+					<td><%= row['user_name']%></td>
+					<td><%= truncate(row['m_content'],length:40)%></td>
+					<td><%= row['created_at']%></td>
+					<td>
+						<a class="btn btn-primary" href="#">Xem</a>
+						
+					</td>
+				</tr>
+			<% else %>
+
+				<tr >
+					<td><%= row['user_name']%></td>
+					<td><%= truncate(row['m_content'],length:40)%></td>
+					<td><%= row['created_at']%></td>
+					<td>
+						
+						
+					</td>
+				</tr>
+
+			<% end %>
 
 		<% end %>
 	</tbody>

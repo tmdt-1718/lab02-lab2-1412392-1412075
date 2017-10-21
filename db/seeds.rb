@@ -22,5 +22,6 @@ Message.create!(m_id:1,m_userown:1,m_usersend:2,m_content:"Em nhớ anh quá. T�
 				m_status:true)
 Message.create!(m_id:2,m_userown:1,m_usersend:4,m_content:"Con trai có khỏe không?",
 				m_status:true)
-
+Message.create!(m_id:3,m_userown:1,m_usersend:2,m_content:"Tối nay anh có rảnh không đi chơi với em :) ?",
+				m_status:false)
 
