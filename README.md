@@ -6,7 +6,7 @@ Thành viên:
 * [x] **1412392** Nguyễn Thanh Phi (1412392)
 * [ ] **MSSV2** Tên sinh viên 2 (tên tài khoản github)
 
-URL: **URL hosting của bài tập**
+URL: **https://friendtalks.herokuapp.com/**
 
 ## Yêu cầu
 
