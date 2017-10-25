@@ -1,0 +1,649 @@
+@font-face {
+  font-family: 'PT Sans', sans-serif;
+  src: url("fonts/BebasNeue-webfont.eot");
+  src: url("fonts/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/BebasNeue-webfont.woff") format("woff"), url("fonts/BebasNeue-webfont.ttf") format("truetype"), url("fonts/BebasNeue-webfont.svg#BebasNeueRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* CSS reset */
+/* line 12, /lab2_1412392/app/assets/stylesheets/login.scss */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 17, /lab2_1412392/app/assets/stylesheets/login.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* line 23, /lab2_1412392/app/assets/stylesheets/login.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, /lab2_1412392/app/assets/stylesheets/login.scss */
+fieldset, img {
+  border: 0;
+}
+
+/* line 32, /lab2_1412392/app/assets/stylesheets/login.scss */
+address, caption, cite, code, dfn, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 37, /lab2_1412392/app/assets/stylesheets/login.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 41, /lab2_1412392/app/assets/stylesheets/login.scss */
+caption, th {
+  text-align: left;
+}
+
+/* line 45, /lab2_1412392/app/assets/stylesheets/login.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+/* line 51, /lab2_1412392/app/assets/stylesheets/login.scss */
+q:before, q:after {
+  content: '';
+}
+
+/* line 56, /lab2_1412392/app/assets/stylesheets/login.scss */
+abbr, acronym {
+  border: 0;
+}
+
+/* line 60, /lab2_1412392/app/assets/stylesheets/login.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* General Demo Style */
+/* line 66, /lab2_1412392/app/assets/stylesheets/login.scss */
+body {
+  font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  background: #fff url("/assets/bg.jpg") repeat top left;
+  font-weight: 400;
+  font-size: 15px;
+  color: #1d3c41;
+  overflow-y: scroll;
+}
+
+/* line 75, /lab2_1412392/app/assets/stylesheets/login.scss */
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* line 80, /lab2_1412392/app/assets/stylesheets/login.scss */
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+/* line 87, /lab2_1412392/app/assets/stylesheets/login.scss */
+.clr {
+  clear: both;
+}
+
+/* line 91, /lab2_1412392/app/assets/stylesheets/login.scss */
+.container > header {
+  padding: 20px 30px 10px 30px;
+  margin: 0px 20px 10px 20px;
+  position: relative;
+  display: block;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+/* line 98, /lab2_1412392/app/assets/stylesheets/login.scss */
+.container > header h1 {
+  font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+  font-size: 35px;
+  line-height: 35px;
+  position: relative;
+  font-weight: 400;
+  color: rgba(26, 89, 120, 0.9);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 0px 0px 5px 0px;
+}
+/* line 107, /lab2_1412392/app/assets/stylesheets/login.scss */
+.container > header h1 span {
+  color: #7cbcd6;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+}
+/* line 112, /lab2_1412392/app/assets/stylesheets/login.scss */
+.container > header h2 {
+  font-size: 16px;
+  font-style: italic;
+  color: #2d6277;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+/* Header Style */
+/* line 122, /lab2_1412392/app/assets/stylesheets/login.scss */
+.codrops-top {
+  line-height: 24px;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  z-index: 9999;
+  position: relative;
+  box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2);
+}
+/* line 130, /lab2_1412392/app/assets/stylesheets/login.scss */
+.codrops-top a {
+  padding: 0px 10px;
+  letter-spacing: 1px;
+  color: #333;
+  text-shadow: 0px 1px 1px #fff;
+  display: block;
+  float: left;
+}
+/* line 137, /lab2_1412392/app/assets/stylesheets/login.scss */
+.codrops-top a:hover {
+  background: #fff;
+}
+/* line 141, /lab2_1412392/app/assets/stylesheets/login.scss */
+.codrops-top span.right {
+  float: right;
+}
+/* line 143, /lab2_1412392/app/assets/stylesheets/login.scss */
+.codrops-top span.right a {
+  float: left;
+  display: block;
+}
+
+/* line 150, /lab2_1412392/app/assets/stylesheets/login.scss */
+.codrops-demos {
+  text-align: center;
+  display: block;
+  padding: 14px;
+}
+/* line 154, /lab2_1412392/app/assets/stylesheets/login.scss */
+.codrops-demos span {
+  display: inline-block;
+  padding-right: 15px;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+}
+/* line 159, /lab2_1412392/app/assets/stylesheets/login.scss */
+.codrops-demos a {
+  display: inline-block;
+  font-style: italic;
+  font-size: 12px;
+  padding: 3px 5px;
+  margin: 0px 3px;
+  font-weight: 800;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05) inset;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  background: rgba(104, 171, 194, 0.5);
+}
+/* line 170, /lab2_1412392/app/assets/stylesheets/login.scss */
+.codrops-demos a.current-demo {
+  display: inline-block;
+  font-style: italic;
+  font-size: 12px;
+  padding: 3px 5px;
+  margin: 0px 3px;
+  font-weight: 800;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05) inset;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  background: rgba(104, 171, 194, 0.5);
+}
+/* line 181, /lab2_1412392/app/assets/stylesheets/login.scss */
+.codrops-demos a.current-demo:hover {
+  display: inline-block;
+  font-style: italic;
+  font-size: 12px;
+  padding: 3px 5px;
+  margin: 0px 3px;
+  font-weight: 800;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05) inset;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  background: rgba(104, 171, 194, 0.5);
+}
+/* line 194, /lab2_1412392/app/assets/stylesheets/login.scss */
+.codrops-demos a:hover {
+  background: #4fa2c4;
+}
+/* line 197, /lab2_1412392/app/assets/stylesheets/login.scss */
+.codrops-demos a.current-demo {
+  color: #68abc2;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+/* line 201, /lab2_1412392/app/assets/stylesheets/login.scss */
+.codrops-demos a.current-demo:hover {
+  color: #68abc2;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* remove codrops styles and reset the whole thing */
+/* line 212, /lab2_1412392/app/assets/stylesheets/login.scss */
+#container_demo {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/** fonts used for the icons **/
+@font-face {
+  font-family: 'FontomasCustomRegular';
+  src: url("fonts/fontomas-webfont.eot");
+  src: url("fonts/fontomas-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/fontomas-webfont.woff") format("woff"), url("fonts/fontomas-webfont.ttf") format("truetype"), url("fonts/fontomas-webfont.svg#FontomasCustomRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FranchiseRegular';
+  src: url("fonts/franchise-bold-webfont.eot");
+  src: url("fonts/franchise-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/franchise-bold-webfont.woff") format("woff"), url("fonts/franchise-bold-webfont.ttf") format("truetype"), url("fonts/franchise-bold-webfont.svg#FranchiseRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/** The wrapper that will contain our two forms **/
+/* line 241, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper {
+  width: 60%;
+  right: 0px;
+  min-height: 560px;
+  margin: 0px auto;
+  width: 500px;
+  position: relative;
+}
+/* line 248, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper a {
+  color: #5f9bc6;
+  text-decoration: underline;
+}
+/* line 252, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper h1 {
+  font-size: 48px;
+  color: #066a75;
+  padding: 2px 0 10px 0;
+  font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+  background: -webkit-repeating-linear-gradient(-45deg, #12535d, #12535d 20px, #406f76 20px, #406f76 40px, #12535d 40px);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+/* line 263, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper h1:after {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: -moz-linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, #93b8bd 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(147, 184, 189, 0)), color-stop(20%, rgba(147, 184, 189, 0.8)), color-stop(53%, #93b8bd), color-stop(79%, rgba(147, 184, 189, 0.8)), color-stop(100%, rgba(147, 184, 189, 0)));
+  background: -webkit-linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, #93b8bd 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+  background: -o-linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, #93b8bd 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+  background: -ms-linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, #93b8bd 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+  background: linear-gradient(left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, #93b8bd 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+}
+/* line 277, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper p {
+  margin-bottom: 15px;
+}
+/* line 279, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper p:first-child {
+  margin: 0px;
+}
+/* line 283, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper label {
+  color: #405c60;
+  position: relative;
+}
+
+/**** Styling the form elements **/
+/**** general text styling ****/
+/** For the moment only webkit supports the background-clip:text; */
+/**** advanced input styling ****/
+/* placeholder */
+/* line 298, /lab2_1412392/app/assets/stylesheets/login.scss */
+::-webkit-input-placeholder, input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #bebcbc;
+  font-style: italic;
+}
+
+/* line 303, /lab2_1412392/app/assets/stylesheets/login.scss */
+input {
+  outline: none;
+}
+
+/* all the input except submit and checkbox */
+/* line 309, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper input:not([type="checkbox"]) {
+  width: 92%;
+  margin-top: 4px;
+  padding: 10px 5px 10px 32px;
+  border: 1px solid #b2b2b2;
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+  -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+  box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+/* line 328, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper input:not([type="checkbox"]):active, #wrapper input:not([type="checkbox"]):focus {
+  border: 1px solid rgba(91, 90, 90, 0.7);
+  background: rgba(238, 236, 240, 0.2);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+  -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+  box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.9) inset;
+}
+
+/** the magic icon trick ! **/
+/* line 339, /lab2_1412392/app/assets/stylesheets/login.scss */
+[data-icon]:after {
+  content: attr(data-icon);
+  font-family: 'FontomasCustomRegular';
+  color: #6a9fab;
+  position: absolute;
+  left: 10px;
+  top: 35px;
+  width: 30px;
+}
+
+/*styling both submit buttons */
+/* line 351, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper p.button input {
+  width: 30%;
+  cursor: pointer;
+  background: #3d9db3;
+  padding: 8px 5px;
+  font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+  color: #fff;
+  font-size: 24px;
+  border: 1px solid #1c6c7a;
+  margin-bottom: 10px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset, 0px 0px 0px 3px #fefefe, 0px 5px 3px 3px #d2d2d2;
+  -moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset, 0px 0px 0px 3px #fefefe, 0px 5px 3px 3px #d2d2d2;
+  box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset, 0px 0px 0px 3px #fefefe, 0px 5px 3px 3px #d2d2d2;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+/* line 372, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper p.button input:hover {
+  background: #4ab3c6;
+}
+/* line 375, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper p.button input:active, #wrapper p.button input:focus {
+  background: #28899a;
+  position: relative;
+  top: 1px;
+  border: 1px solid #0c4c57;
+  -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* line 387, /lab2_1412392/app/assets/stylesheets/login.scss */
+p.login.button, p.signin.button {
+  text-align: right;
+  margin: 5px 0;
+}
+
+/* styling the checkbox "keep me logged in"*/
+/* line 395, /lab2_1412392/app/assets/stylesheets/login.scss */
+.keeplogin {
+  margin-top: -5px;
+}
+/* line 397, /lab2_1412392/app/assets/stylesheets/login.scss */
+.keeplogin input, .keeplogin label {
+  display: inline-block;
+  font-size: 12px;
+  font-style: italic;
+}
+/* line 402, /lab2_1412392/app/assets/stylesheets/login.scss */
+.keeplogin input#loginkeeping {
+  margin-right: 5px;
+}
+/* line 405, /lab2_1412392/app/assets/stylesheets/login.scss */
+.keeplogin label {
+  width: 80%;
+}
+
+/*styling the links to change from one form to another */
+/* line 412, /lab2_1412392/app/assets/stylesheets/login.scss */
+p.change_link {
+  position: absolute;
+  color: #7f7c7c;
+  left: 0px;
+  height: 20px;
+  width: 440px;
+  padding: 17px 30px 20px 30px;
+  font-size: 16px;
+  text-align: right;
+  border-top: 1px solid #dbe5e8;
+  -webkit-border-radius: 0 0  5px 5px;
+  -moz-border-radius: 0 0  5px 5px;
+  border-radius: 0 0  5px 5px;
+  background: #e1eaeb;
+  background: -moz-repeating-linear-gradient(-45deg, #f7f7f7, #f7f7f7 15px, #e1eaeb 15px, #e1eaeb 30px, #f7f7f7 30px);
+  background: -webkit-repeating-linear-gradient(-45deg, #f7f7f7, #f7f7f7 15px, #e1eaeb 15px, #e1eaeb 30px, #f7f7f7 30px);
+  background: -o-repeating-linear-gradient(-45deg, #f7f7f7, #f7f7f7 15px, #e1eaeb 15px, #e1eaeb 30px, #f7f7f7 30px);
+  background: repeating-linear-gradient(-45deg, #f7f7f7, #f7f7f7 15px, #e1eaeb 15px, #e1eaeb 30px, #f7f7f7 30px);
+}
+
+/* line 432, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper p.change_link a {
+  display: inline-block;
+  font-weight: bold;
+  background: #f7f8f1;
+  padding: 2px 6px;
+  color: #1da2c1;
+  margin-left: 10px;
+  text-decoration: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #cbd5d6;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s  linear;
+  -o-transition: all 0.4s linear;
+  -ms-transition: all 0.4s  linear;
+  transition: all 0.4s  linear;
+}
+/* line 449, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper p.change_link a:hover {
+  color: #39bfd7;
+  background: #f7f7f7;
+  border: 1px solid #4ab3c6;
+}
+/* line 454, /lab2_1412392/app/assets/stylesheets/login.scss */
+#wrapper p.change_link a:active {
+  position: relative;
+  top: 1px;
+}
+
+/** Styling both forms **/
+/* line 462, /lab2_1412392/app/assets/stylesheets/login.scss */
+#register {
+  position: absolute;
+  top: 0px;
+  width: 88%;
+  padding: 18px 6% 60px 6%;
+  margin: 0 0 35px 0;
+  background: #f7f7f7;
+  border: 1px solid rgba(147, 184, 189, 0.8);
+  -webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+  -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+  box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+  -webkit-box-shadow: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 478, /lab2_1412392/app/assets/stylesheets/login.scss */
+#login {
+  position: absolute;
+  top: 0px;
+  width: 88%;
+  padding: 18px 6% 60px 6%;
+  margin: 0 0 35px 0;
+  background: #f7f7f7;
+  border: 1px solid rgba(147, 184, 189, 0.8);
+  -webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+  -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+  box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+  -webkit-box-shadow: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  z-index: 22;
+}
+
+/* line 495, /lab2_1412392/app/assets/stylesheets/login.scss */
+#toregister:target ~ #wrapper #register, #tologin:target ~ #wrapper #login {
+  z-index: 22;
+  -webkit-animation-delay: .6s;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-delay: .6s;
+  -moz-animation-timing-function: ease-in;
+  -o-animation-delay: .6s;
+  -o-animation-timing-function: ease-in;
+  -ms-animation-delay: .6s;
+  -ms-animation-timing-function: ease-in;
+  animation-delay: .6s;
+  animation-timing-function: ease-in;
+  -webkit-animation-name: scaleIn;
+  -moz-animation-name: scaleIn;
+  -ms-animation-name: scaleIn;
+  -o-animation-name: scaleIn;
+  animation-name: scaleIn;
+}
+
+/* line 514, /lab2_1412392/app/assets/stylesheets/login.scss */
+#toregister:target ~ #wrapper #login, #tologin:target ~ #wrapper #register {
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-name: scaleOut;
+  -moz-animation-name: scaleOut;
+  -ms-animation-name: scaleOut;
+  -o-animation-name: scaleOut;
+  animation-name: scaleOut;
+}
+
+/** the actual animation, credit where due : http://daneden.me/animate/ ***/
+/* line 529, /lab2_1412392/app/assets/stylesheets/login.scss */
+.animate {
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-fill-mode: both;
+  -o-animation-duration: 0.5s;
+  -o-animation-fill-mode: both;
+  -ms-animation-duration: 0.5s;
+  -ms-animation-fill-mode: both;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+/** yerk some ugly IE fixes 'cause I know someone will ask "why does it look ugly in IE?", no matter how many warnings I will put in the article */
+/* line 546, /lab2_1412392/app/assets/stylesheets/login.scss */
+.lt8 #wrapper input {
+  padding: 10px 5px 10px 32px;
+  width: 92%;
+}
+/* line 549, /lab2_1412392/app/assets/stylesheets/login.scss */
+.lt8 #wrapper input[type=checkbox] {
+  width: 10px;
+  padding: 0;
+}
+/* line 554, /lab2_1412392/app/assets/stylesheets/login.scss */
+.lt8 #wrapper h1 {
+  color: #066A75;
+}
+/* line 558, /lab2_1412392/app/assets/stylesheets/login.scss */
+.lt8 p.change_link {
+  position: absolute;
+  height: 90px;
+  background: transparent;
+}
+
+/* line 565, /lab2_1412392/app/assets/stylesheets/login.scss */
+.ie9 p.change_link {
+  position: absolute;
+  height: 90px;
+  background: transparent;
+}
+/* line 5, /lab2_1412392/app/assets/stylesheets/user.scss */
+#register {
+  position: absolute;
+  top: 0px;
+  width: 50%;
+  left: 270px;
+  padding: 18px 6% 60px 6%;
+  margin: 0 0 35px 0;
+  background: #f7f7f7;
+  border: 1px solid rgba(147, 184, 189, 0.8);
+  -webkit-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+  -moz-box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+  box-shadow: 0pt 2px 5px rgba(105, 108, 109, 0.7), 0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+  -webkit-box-shadow: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+@import "login";
+@import "user";
+
+body {
+  font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+  background: #fff url('/assets/bg.jpg') repeat top left;
+
+}
+
