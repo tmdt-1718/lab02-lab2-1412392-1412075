@@ -12,4 +12,8 @@ Rails.application.routes.draw do
 
  	get '/listfriend',to: 'listfriend#index'
  	post '/listfriend',to: 'listfriend#addfriend'
+
+
+ 	get '/sendmessage',to: 'sendmessage#index'
+ 	post '/sendmessage',to: 'sendmessage#sendmessage'
 end

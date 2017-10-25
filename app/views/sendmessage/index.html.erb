@@ -1,0 +1,78 @@
+<h1 style="font-family: Arial" class="text-info">GỬI TIN NHẮN CHO BẠN BÈ</h1>
+
+
+<br>
+<br>
+<div class="row areaform">
+	<form id="sendmessageform">
+	
+	<div class="form-group">
+			<label style="color: red;" for="">Chọn người gửi</label>
+			<input type="hidden" value="<%=@id%>" id="usercurrentid" name="">
+			<div style="margin-left: 500px;">
+				<select style="width: 30%" id="usersend" class="form-control" required="required">
+					<option value="0">Danh sách bạn bè</option>
+
+					<% @listfriend.each do |row| %>
+
+						<option value="<%= row['user_id']%>"><%= row['user_name'] %></option>
+
+					<%end%>
+					
+				</select>
+			</div>
+			
+	</div>
+<br>
+
+	<div class="form-group">
+		<label  style="color: red;" for="">Nội dung</label>
+		<textarea rows="7" id="contentarea" cols="80" required="true" placeholder="Nhập nội dung tin nhắn..."></textarea>
+	</div>
+	
+		
+		
+	
+		<button type="submit" class="btn btn-primary">Gửi</button>
+	</form>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		$('#sendmessageform').submit(function(e)
+		{
+			e.preventDefault();
+
+			var usercurrent=$('#usercurrentid').val();
+			var usersend=$('#usersend option:selected').val();;
+			var content=$('#contentarea').val();
+
+			var datasend={
+				usersend:usersend,
+				usercurrent:usercurrent,
+				content:content
+			};
+			
+			$.ajax({
+				type:'POST',
+				url:'/sendmessage',
+				dataType:'json',
+				contentType: 'application/json; charset=utf-8',
+				ajaxasync: true,
+                data: JSON.stringify(datasend),
+                success:function(response)
+                {
+                	$('#sendmessageform').empty();
+                	$('.areaform').append('<h1 class="text-success">ĐÃ GỬI TIN NHẮN THÀNH CÔNG.</h1>');
+
+                },
+                 error: function (err) {
+                    console.log(err);
+                }
+			});
+		});
+
+	});
+
+</script>
