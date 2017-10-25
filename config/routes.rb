@@ -9,4 +9,7 @@ Rails.application.routes.draw do
  	post '/signup', to:  'user#create'
 
  	post '/updatemessage', to: 'home#updatemessage'
+
+ 	get '/listfriend',to: 'listfriend#index'
+ 	post '/listfriend',to: 'listfriend#addfriend'
 end

@@ -25,3 +25,11 @@ Message.create!(m_id:2,m_userown:1,m_usersend:4,m_content:"Con trai có khỏe k
 Message.create!(m_id:3,m_userown:1,m_usersend:2,m_content:"Tối nay anh có rảnh không đi chơi với em :) ?",
 				m_status:false)
 
+Friendtable.delete_all
+Friendtable.create!(id_user:1,id_friend:3)
+Friendtable.create!(id_user:1,id_friend:4)
+Friendtable.create!(id_user:1,id_friend:5)
+
+Friendtable.create!(id_user:3,id_friend:4)
+Friendtable.create!(id_user:3,id_friend:5)
+
