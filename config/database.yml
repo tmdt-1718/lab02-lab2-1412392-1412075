@@ -17,8 +17,7 @@ test:
   <<: *default
   database: lab2_1412392_test
 
-#
- production:
+production:
    <<: *default
    adapter: postgresql
    database: db/production.sqlite3
