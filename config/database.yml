@@ -19,6 +19,6 @@ test:
 
 production:
   <<: *default
-  database: lab2_1412392_development
+  database: lab2_1412392_production
   username: web
   password: 123
