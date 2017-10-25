@@ -18,6 +18,7 @@ test:
   database: lab2_1412392_test
 
 production:
-   <<: *default
-   adapter: postgresql
-   database: db/production.sqlite3
+  <<: *default
+  database: lab2_1412392_development
+  username: web
+  password: 123
